@@ -1,0 +1,353 @@
+/* =====================
+   Global Styles
+===================== */
+:root {
+  --primary: #6c63ff;
+  --secondary: #00d4ff;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+/* =====================
+   Navbar
+===================== */
+.navbar {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--secondary);
+}
+
+/* =====================
+   Hero Section
+===================== */
+.hero-section {
+  position: relative;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.hero-title {
+  color: var(--secondary);
+}
+
+.hero-description {
+  max-width: 520px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn-custom {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px);
+}
+
+.btn-custom-outline {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+.btn-custom-outline:hover {
+  background: var(--secondary);
+  color: #000;
+}
+
+/* =====================
+   Profile Image
+===================== */
+.profile-image-wrapper {
+  position: relative;
+  width: 320px;
+  margin: auto;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid var(--secondary);
+}
+
+/* =====================
+   Highlights Section
+===================== */
+.highlights-section {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.highlight-card {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+/* =====================
+   Footer
+===================== */
+.footer {
+  background: #020617;
+}
+
+.social-link {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  margin-left: 15px;
+}
+
+.social-link:hover {
+  color: #fff;
+}
+
+/* =====================
+   Animations
+===================== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   Page Header
+===================== */
+.page-header {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,255,0.08));
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+/* =====================
+   Education Card
+===================== */
+.education-card {
+  display: flex;
+  gap: 25px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.education-icon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+}
+
+.highlight-badge {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 6px 14px;
+  background: rgba(0,212,255,0.15);
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* =====================
+   Skills Progress
+===================== */
+.skill-item {
+  background: var(--glass);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+  transition: width 1.5s ease;
+}
+
+/* =====================
+   Skill Category Cards
+===================== */
+.skill-category-card {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 40px rgba(0,212,255,0.18);
+}
+
+.category-icon {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.category-skills {
+  padding-left: 18px;
+}
+
+/* =====================
+   CTA Section
+===================== */
+.cta-card {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 50px;
+  border-radius: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+/* =====================
+   Contact Section
+===================== */
+.contact-info-wrapper,
+.contact-form-wrapper {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 20px;
+}
+
+/* Contact Info */
+.contact-info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  min-width: 40px;
+}
+
+/* Social Media Large */
+.social-links-large {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-link-large {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  color: var(--secondary);
+  transition: 0.3s;
+}
+
+.social-link-large:hover {
+  background: var(--secondary);
+  color: #000;
+  transform: translateY(-5px);
+}
+
+/* =====================
+   Form Styling
+===================== */
+.form-control {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.15rem rgba(0,212,255,0.25);
+  color: #fff;
+}
+
+/* =====================
+   Additional Info
+===================== */
+.info-card {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 40px;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.info-card i {
+  font-size: 2.5rem;
+}
